@@ -3,6 +3,7 @@ import './Team.css';
 
 const Team = (props) => {
     const {name, id, username, email} = props.team;
+    const handleAddTeam = props.handleAddTeam;
     
     return (
         <div className="team-main">
@@ -10,6 +11,7 @@ const Team = (props) => {
             <h5>User Name : {username}</h5>
             <h5>ID : {id}</h5>
             <h5>Email : {email}</h5>
+            <button onClick={()=> handleAddTeam(name, id)}>Team Member Added</button>
         </div>
     );
 };
